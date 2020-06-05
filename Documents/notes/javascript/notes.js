@@ -91,7 +91,30 @@ Data types: string, numbers, boolean, null, undefined
 	}
 
 /* Function & Method & Property
+Function:
+	When a function is called without proper parameters (that requires them) it will return NaN {Not a Number}
+	don't require returns but can have them
 
+	function myFunc(param1, param2){
+		//do stuff
+		return //some kind of stuff if need be
+	}
+		ex: 
+			function addNums(num1){
+				return num1 + 5;
+			}		
+			console.log(addNums(33));
+
+Arrow Function:
+	name a function essentially a variable. 
+	assign parameters. 
+	use fat arrow to function code (DO NOT USE RETURN keyword)
+	you can now call the function by using the variable name
+	
+	const myFunc = (param1, param2) => (//do stuff);
+		ex:
+			const addNums = num1 => num1 + 5;
+			console.log(addNums(33));
 
 Method:
 	uses dot at beginning after object
@@ -279,3 +302,4 @@ Array's of Objects
 
 
 */
+
