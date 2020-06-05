@@ -118,3 +118,31 @@ const todos = [
 
 
 //////Functions
+// //EX 1
+// function addNums(num1 = 0, num2 = 0){
+// 	return (num1 + num2);
+// }
+// console.log(addNums(5,9));
+
+//  //EX 2
+// function addNums(num1){
+// 	return num1 + 5;
+// }
+// console.log(addNums(33));
+
+//Arrow Functions
+//  //EX 1 identical to Functions EX1
+// const addNums = (num1 = 0, num2 = 0) =>  num1 + num2;
+// console.log(addNums(3,4));
+
+//  //EX 2 identical to Functions EX2
+// const addNums = num1 => num1 + 5;
+// console.log(addNums(33));
+
+paused at 59:27
+
+
+
+
+
+
