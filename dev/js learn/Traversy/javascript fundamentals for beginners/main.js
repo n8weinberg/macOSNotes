@@ -139,7 +139,112 @@ const todos = [
 // const addNums = num1 => num1 + 5;
 // console.log(addNums(33));
 
-paused at 59:27
+
+///Constructor functions with prototypes
+ // //EX1
+	// 		//object name should start with a capital
+	// 				//parameters of the properties you want to set
+	// //constructor
+	// function Person(firstName, lastName, dob){
+	// 	//you want to set the parameters to the properties of the object by using the this keyword
+	// 	this.firstName = firstName;
+	// 	this.lastName = lastName;
+	// 	this.dob = dob;
+	// }
+	// //instantiate an object by using the Person() constructor
+	// const person1 = new Person('John', 'Doe', '4-3-1980');
+	// console.log(person1);
+
+// //  //EX2 -Access specific properties from object and also use the Date constructor for the date of birth
+// 	function Person(firstName, lastName, dob){
+// 		//you want to set the parameters to the properties of the object by using the this keyword
+// 		this.firstName = firstName;
+// 		this.lastName = lastName;
+// 		this.dob = new Date(dob); //the new Date() constructor will format the string as a date
+// 	}
+// 	//instantiate an object by using the Person() constructor
+// 	const person1 = new Person('John', 'Doe', '4-3-1980');
+// 	const person2 = new Person('Jane', 'Smith', '9-2-1929');
+// 	console.log(person1.firstName);
+// 	console.log(person2.dob);
+// 	console.log(person2.dob.getFullYear());
+
+//  //EX3 --Add functionality to the prototype function by adding internal functions
+	// function Person(firstName, lastName, dob){
+	// 	//you want to set the parameters to the properties of the object by using the this keyword
+	// 	this.firstName = firstName;
+	// 	this.lastName = lastName;
+	// 	this.dob = new Date(dob); //the new Date() constructor will format the string as a date
+	// 	//these functions are directly visible in the object even in the console
+	// 	this.getBirthYear = function(){
+	// 		return this.dob.getFullYear();
+	// 	}
+	// 	this.getFullName = function(){
+	// 		return `${this.firstName} ${this.lastName}`;
+	// 	}
+	// }
+	// //instantiate an object by using the Person() constructor
+	// const person1 = new Person('John', 'Doe', '4-3-1980');
+	// const person2 = new Person('Jane', 'Smith', '9-2-1929');
+
+	// console.log(person1.getBirthYear());
+	// console.log(person1.getFullName());
+
+
+// //  //EX4 put object functions inside Prototypes from ES6
+// 	function Person(firstName, lastName, dob){
+// 		//you want to set the parameters to the properties of the object by using the this keyword
+// 		this.firstName = firstName;
+// 		this.lastName = lastName;
+// 		this.dob = new Date(dob); //the new Date() constructor will format the string as a date
+// 	}
+
+// 	//by using the prototype, you don't see the functions inside the Person object 
+// 		//but inside it's __proto__ section.
+// 	Person.prototype.getBirthYear = function(){
+// 		return this.dob.getFullYear();
+// 	}
+
+// 	Person.prototype.getFullName = function(){
+// 		return `${this.firstName} ${this.lastName}`;
+// 	}
+
+// 	//instantiate an object by using the Person() constructor
+// 	const person1 = new Person('John', 'Doe', '4-3-1980');
+// 	const person2 = new Person('Jane', 'Smith', '9-2-1929');
+
+// 	console.log(person1.getBirthYear());
+// 	console.log(person1);
+
+// //  //EX5 ES6 Classes
+// 	//Class -No need to use the prototypes or make Person() a function
+// 	class Person {
+// 		constructor(firstName, lastName, dob) {
+// 		this.firstName = firstName;
+// 		this.lastName = lastName;
+// 		this.dob = new Date(dob); //the new Date() constructor will format the string as a date
+// 		}
+// 		//These functions are shown in the __proto__ section
+// 		getBirthYear(){
+// 			return this.dob.getFullYear();
+// 		}
+// 		getFullName(){
+// 			return `${this.firstName} ${this.lastName}`;
+// 		}
+// 	}
+
+// 	//instantiate an object by using the Person() constructor. Stays the same with Classes
+// 	const person1 = new Person('John', 'Doe', '4-3-1980');
+// 	const person2 = new Person('Jane', 'Smith', '9-2-1929');
+
+// 	console.log(person1.getBirthYear());
+// 	console.log(person1);
+
+
+
+
+
+
 
 
 
